@@ -1,0 +1,27 @@
+@use "../utils" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $col-bg;
+  overflow: hidden;
+}
+
+main {
+  min-height: 100vh;
+  @include flex();
+}

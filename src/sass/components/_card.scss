@@ -1,0 +1,68 @@
+@use "../utils" as *;
+
+.card {
+  background-color: white;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  border-radius: rem(15);
+  width: 90vw;
+  max-width: 320px;
+  overflow: hidden;
+  position: relative;
+
+  @include bp("large") {
+    display: flex;
+    max-width: 720px;
+    position: static;
+    overflow: visible;
+  }
+
+  &__image {
+    height: rem(200);
+
+    @include bp("large") {
+      height: inherit;
+      width: auto;
+      border-radius: rem(15) 0 0 rem(15);
+      overflow: hidden;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center -10px;
+
+      @include bp("large") {
+        object-position: center;
+      }
+    }
+  }
+
+  &__content {
+    padding: rem(36) rem(32) rem(16);
+
+    @include bp("large") {
+      padding: rem(36);
+    }
+  }
+
+  &__title {
+    font-size: rem(16);
+    color: $col-head;
+
+    @include bp("large") {
+      font-size: rem(18);
+    }
+  }
+
+  &__para {
+    font-size: rem(13);
+    color: $col-para;
+    margin-top: rem(16);
+    line-height: 1.5;
+
+    @include bp("large") {
+      font-size: rem(14);
+    }
+  }
+}
